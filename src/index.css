@@ -1,0 +1,31 @@
+@import './../public/rokhFont.css';
+@import './../public/iranSansFont.css';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --base: #000000;
+  --text: #404040;
+  --background: #FFFBFB;
+  --primary: #5264FF;
+  --stroke: rgba(64, 64, 64, .25);
+  --orange: rgba(255, 170, 124, .2);
+  --orange-text: #FF782C;
+  --orange-stroke: rgba(255, 120, 44, .25);
+}
+
+:root[dark] {
+  --background: #1E1E1E;
+  --text: #FFFFFF;
+  --base: #FFFFFF;
+  --orange: rgba(255, 170, 124, .05);
+  --storke: rgba(255, 255, 255, .25);
+}
+
+ul {
+  list-style: none;
+}

@@ -1,0 +1,97 @@
+.hero {
+    color: var(--text);
+}
+
+.poem {
+    padding: .75rem;
+    background-color: var(--orange);
+    border: 1px solid var(--orange-stroke);
+    width: fit-content;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+    font-family: 'rokh';
+    font-weight: bold;
+    color: var(--orange-text);
+}
+
+.sunLogo {
+    width: 1rem;
+}
+
+.heroTitle {
+    margin: 1rem .25rem;
+    line-height: 2.75rem;
+}
+
+.heroTitle img {
+    width: 2rem;
+    margin: 0 .25rem;
+}
+
+.primary {
+    color: var(--primary);
+}
+
+.heroImageContainer {
+    position: relative;
+}
+
+.heroImageContainer .heroImage {
+    width: 100%;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
+.heroImageContainer .imageInfo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: rgba(255, 255, 255, .4);
+    border: 1px solid white;
+    color: white !important;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.imageInfo h3 {
+    font-size: .8rem;
+    font-weight: 500;
+    display: flex;
+    align-items: baseline;
+}
+
+.locationIcon {
+    width: 1rem;
+}
+
+.imageInfo p {
+    font-weight: bold;
+    font-size: 1.75rem;
+}
+
+.places {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.placesImage {
+    border: 1px solid var(--text);
+    padding: .75rem 1rem;
+    border-radius: 1rem;
+}
+
+.placesImage img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.placesName {
+    padding-top: .5rem;
+    display: inline-block;
+    font-family: 'iransans';
+}
