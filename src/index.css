@@ -1,5 +1,5 @@
-@import './../public/rokhFont.css';
 @import './../public/iranSansFont.css';
+@import './../public/danaFont.css';
 
 * {
   padding: 0;
@@ -28,4 +28,20 @@
 
 ul {
   list-style: none;
+}
+
+select,
+input,
+button {
+  border: none;
+  outline: none;
+  font: 1.1rem 'iransans';
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+option {
+  background-color: var(--background);
 }

@@ -1,5 +1,6 @@
 .hero {
     color: var(--text);
+    font-family: 'dana';
 }
 
 .poem {
@@ -11,7 +12,6 @@
     display: flex;
     align-items: center;
     column-gap: .25rem;
-    font-family: 'rokh';
     font-weight: bold;
     color: var(--orange-text);
 }
@@ -46,8 +46,8 @@
 
 .heroImageContainer .imageInfo {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: .75rem;
+    left: .75rem;
     background-color: rgba(255, 255, 255, .4);
     border: 1px solid white;
     color: white !important;
@@ -67,7 +67,7 @@
 }
 
 .imageInfo p {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1.75rem;
 }
 
@@ -80,18 +80,148 @@
 }
 
 .placesImage {
-    border: 1px solid var(--text);
+    border: 1.5px solid var(--stroke);
     padding: .75rem 1rem;
     border-radius: 1rem;
+    display: flex;
 }
 
 .placesImage img {
     width: 1.5rem;
-    height: 1.5rem;
+    height: 1.75rem;
 }
 
 .placesName {
     padding-top: .5rem;
     display: inline-block;
     font-family: 'iransans';
+}
+
+.searchSection {
+    border: 1.5px solid var(--stroke);
+    padding: 1rem;
+    border-radius: 1.5rem;
+}
+
+.destination {
+    display: flex;
+    align-items: center;
+}
+
+img.searchIcons {
+    width: 1.75rem;
+    filter: brightness(0);
+}
+
+html[dark] img.searchIcons {
+    filter: brightness(1);
+}
+
+.destination select {
+    width: 100%;
+    background-color: var(--backgroound);
+    color: var(--text);
+    padding-top: .35rem;
+}
+
+.dateStart {
+    position: relative;
+    padding: .5rem .05rem .5rem 0;
+    display: flex;
+}
+
+.dateStart img.searchIcons {
+    width: 1.5rem;
+}
+
+.dateStart::before {
+    content: attr(select-date);
+    color: var(--text);
+    position: absolute;
+    top: 55%;
+    right: 2rem;
+    transform: translateY(-50%);
+    font: 1.1rem 'iransans';
+}
+
+.dateInput {
+    width: 100%;
+    z-index: 10;
+    opacity: 0;
+}
+
+.dateInput::-webkit-calendar-picker-indicator {
+    width: 100%;
+    cursor: pointer;
+}
+
+.arrowIcons {
+    font-size: 1.25rem;
+    font-weight: 900;
+    position: absolute;
+    top: 55%;
+    left: -2px;
+    transform: translateY(-50%);
+}
+
+.dateEnd {
+    position: relative;
+    padding-right: .05rem;
+    display: flex;
+}
+
+.dateEnd img.searchIcons {
+    width: 1.5rem;
+}
+
+.dateEnd::before {
+    content: attr(select-date);
+    color: var(--text);
+    position: absolute;
+    top: 55%;
+    right: 2rem;
+    transform: translateY(-50%);
+    font: 1.1rem 'iransans';
+}
+
+.personSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: .25rem;
+}
+
+.numberOfPerson {
+    display: flex;
+    align-items: center;
+    font: 1.1rem 'iransans';
+}
+
+.numberOfPerson img {
+    padding-left: .35rem;
+}
+
+.numberOfPerson span {
+    padding-top: .35rem;
+}
+
+.personSection .arrowDown {
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+.personSection select {
+    width: 100%;
+    background-color: var(--backgroound);
+    color: var(--text);
+    padding: .35rem .1rem 0 0;
+}
+
+.searchButton {
+    width: 100%;
+    background-color: var(--primary);
+    color: white;
+    padding: .5rem 0;
+    margin-top: .75rem;
+    border-radius: 4rem;
 }

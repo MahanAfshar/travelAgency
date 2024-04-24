@@ -27,7 +27,7 @@
             url('./../src/assets/fonts/iransans/IRANSansWeb.woff2') format('woff2'),
             url('./../src/assets/fonts/iransans/IRANSansWeb.woff') format('woff'),
             url('./../src/assets/fonts/iransans/IRANSansWeb.ttf') format('truetype');
-    font-weight: 400;
+    font-weight: normal;
     font-style: normal;
 }
 
@@ -49,6 +49,6 @@
             url('./../src/assets/fonts/iransans/IRANSansWeb_Bold.woff2') format('woff2'),
             url('./../src/assets/fonts/iransans/IRANSansWeb_Bold.woff') format('woff'),
             url('./../src/assets/fonts/iransans/IRANSansWeb_Bold.ttf') format('truetype');
-    font-weight: 700;
+    font-weight: bold;
     font-style: normal;
 }
