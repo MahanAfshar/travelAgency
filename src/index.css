@@ -16,14 +16,25 @@
   --orange: rgba(255, 170, 124, .2);
   --orange-text: #FF782C;
   --orange-stroke: rgba(255, 120, 44, .25);
+  --secondary: #EAEAEA;
+  --yellow: #FFDA19;
+  --secondary-button: #D3D3D3;
+  --card-container: #5264FF;
+  --card-background: #7D8BFF;
+  --icon-background: rgba(62, 92, 251, .45);
 }
 
 :root[dark] {
   --background: #1E1E1E;
-  --text: #FFFFFF;
+  --text: #FBFBFB;
   --base: #FFFFFF;
   --orange: rgba(255, 170, 124, .05);
   --storke: rgba(255, 255, 255, .25);
+  --secondary: #444444;
+  --secondary-button: #444444;
+  --card-container: #1D1D1D;
+  --card-background: #4A4A4A;
+  --icon-background: #3D3D3D;
 }
 
 ul {
@@ -36,6 +47,10 @@ button {
   border: none;
   outline: none;
   font: 1.1rem 'iransans';
+}
+
+button {
+  cursor: pointer;
 }
 
 select:hover {

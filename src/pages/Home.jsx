@@ -1,6 +1,8 @@
-import Header from "../components/Header"
 import Hero from "../components/Hero"
 import styled from "styled-components"
+import PopularPlaces from "../components/PopularPlaces";
+import Benefits from "../components/Benefits";
+import BestSellingTours from "../components/BestSellingTours";
 
 const Main = styled.main`
   padding: 1rem;
@@ -9,12 +11,12 @@ const Main = styled.main`
 
 const Home = () => {
   return (
-    <>
-      <Header />
-      <Main className="container">
-        <Hero />
-      </Main>
-    </>
+    <Main className="container">
+      <Hero />
+      <PopularPlaces />
+      <Benefits />
+      <BestSellingTours />
+    </Main>
   )
 }
 
