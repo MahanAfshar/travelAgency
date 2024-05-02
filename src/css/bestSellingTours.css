@@ -70,7 +70,7 @@ html[dark] .filterSection img {
     border-radius: 50%;
     background-color: var(--secondary-button);
     color: var(--text);
-    display: grid;
+    display: none;
     place-content: center;
     margin: .5rem auto;
 }

@@ -44,7 +44,7 @@ const Ul = styled.ul`
     text-align: center;
     background-color: var(--card-container);
     border-radius: 2rem;
-    border: 1.5px solid ${document.documentElement.hasAttribute('dark') ? 'rgba(251, 251, 251, .25)' : '#5264FF'};
+    border: 1.5px solid var(--border-container);
 `;
 const Li = styled.li`
     background-color: var(--card-background);
