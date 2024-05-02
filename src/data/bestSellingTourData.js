@@ -2,9 +2,9 @@ import antalya from './../assets/images/antalya.jpg'
 import dubai from './../assets/images/dubai.jpg'
 import malaysia from './../assets/images/malaysia.jpg'
 
-
 const bestSellingTourData = [
     {
+        id: 1,
         image: antalya,
         name: 'تور آنتالیا',
         score: 4.1,
@@ -12,6 +12,7 @@ const bestSellingTourData = [
         price: 45000000
     },
     {
+        id: 2,
         image: dubai,
         name: 'تور دبی',
         score: 4.9,
@@ -19,7 +20,8 @@ const bestSellingTourData = [
         price: 65000000
     },
     {
-        image: antalya,
+        id: 3,
+        image: malaysia,
         name: 'تور مالزی',
         score: 4.1,
         duration: '3 روز و 4 شب',

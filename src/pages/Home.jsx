@@ -4,6 +4,7 @@ import PopularPlaces from "../components/PopularPlaces";
 import Benefits from "../components/Benefits";
 import BestSellingTours from "../components/BestSellingTours";
 import DownloadSection from "../components/DownloadSection"
+import Comments from "../components/Comments";
 
 const Main = styled.main`
   padding: 1rem;
@@ -18,6 +19,7 @@ const Home = () => {
       <Benefits />
       <BestSellingTours />
       <DownloadSection />
+      <Comments />
     </Main>
   )
 }

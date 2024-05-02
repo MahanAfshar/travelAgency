@@ -23,6 +23,7 @@
   --card-container: #5264FF;
   --card-background: #7D8BFF;
   --icon-background: rgba(62, 92, 251, .45);
+  --comment-name: #6F1DF4;
 }
 
 :root[dark] {
@@ -37,6 +38,7 @@
   --card-container: #1D1D1D;
   --card-background: #4A4A4A;
   --icon-background: #3D3D3D;
+  --comment-name: #5264FF;
 }
 
 ul {
