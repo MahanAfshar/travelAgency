@@ -1,14 +1,24 @@
 import Hero from "../components/Hero"
 import styled from "styled-components"
-import PopularPlaces from "../components/PopularPlaces";
-import Benefits from "../components/Benefits";
-import BestSellingTours from "../components/BestSellingTours";
+import PopularPlaces from "../components/PopularPlaces"
+import Benefits from "../components/Benefits"
+import BestSellingTours from "../components/BestSellingTours"
 import DownloadSection from "../components/DownloadSection"
-import Comments from "../components/Comments";
+import Comments from "../components/Comments"
 
 const Main = styled.main`
-  padding: 1rem;
+  padding: 6rem 1rem 1rem 1rem;
   background-color: var(--background);
+
+  @media only screen and (min-width: 600px) {
+    padding: 5rem 2rem;
+  };
+  @media only screen and (min-width: 750px) {
+    padding: 5rem 3rem;
+  };
+  @media only screen and (min-width: 1000px) {
+    padding: 5rem 4.5rem;
+  };
 `;
 
 const Home = () => {

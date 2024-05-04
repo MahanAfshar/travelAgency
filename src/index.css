@@ -24,6 +24,7 @@
   --card-background: #7D8BFF;
   --icon-background: rgba(62, 92, 251, .45);
   --comment-name: #6F1DF4;
+  --menu-icon-background: rgba(62, 93, 251, 0.975);
 }
 
 :root[dark] {
@@ -39,6 +40,7 @@
   --card-background: #4A4A4A;
   --icon-background: #3D3D3D;
   --comment-name: #5264FF;
+  --menu-icon-background: #3D3D3D;
 }
 
 ul {

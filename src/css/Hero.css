@@ -40,8 +40,9 @@
 
 .heroImageContainer .heroImage {
     width: 100%;
-    border-bottom-left-radius: 1.5rem;
-    border-bottom-right-radius: 1.5rem;
+    height: 270px;
+    border-radius: 1.5rem;
+    image-rendering: pixelated;
 }
 
 .heroImageContainer .imageInfo {
@@ -224,4 +225,69 @@ html[dark] img.searchIcons {
     padding: .5rem 0;
     margin-top: .75rem;
     border-radius: 4rem;
+}
+
+@media only screen and (min-width: 350px) {
+    .heroImage {
+        height: auto !important;
+    }
+}
+
+@media only screen and (min-width: 550px) {
+    .hero {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        padding-top: .5rem;
+    }
+    .poem {
+        order: -3;
+        height: fit-content;
+    }
+    .heroTitle {
+        order: -2;
+    }
+    .places {
+        order: -1;
+    }
+    .heroImageContainer {
+        grid-column: 2 / 3;
+        grid-row: 1 / 4;
+    }
+    .heroImage {
+        height: 100% !important;
+    }
+    .imageInfo {
+        left: 50% !important;
+        transform: translateX(-50%);
+    }
+    .searchSection {
+        position: absolute;
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .hero {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .heroTitle {
+        font-size: 2rem;
+        padding-left: 2rem;
+    }
+    .imageInfo {
+        left: .75rem !important;
+        transform: none;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .hero {
+        grid-template-columns: auto 550px;
+    }
+    .heroTitle {
+        font-size: 2.25rem;
+        padding-left: 4rem;
+    }
 }
