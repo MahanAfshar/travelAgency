@@ -6,6 +6,7 @@ import cart from "./../assets/icons/cart.svg"
 import person from "./../assets/icons/person.svg"
 import { useState } from 'react'
 import { IoIosArrowDown } from "react-icons/io"
+import { IoSunny } from "react-icons/io5"
 
 const HeaderMenu = () => {
     const [dropdownActive, setDropdownActive] = useState('');
@@ -15,7 +16,9 @@ const HeaderMenu = () => {
         else
             setDropdownActive(name);
     };
-    console.log(dropdownActive)
+    const toggleTheme = () => {
+        document.documentElement.toggleAttribute('dark');
+    };
 
     return (
         <>
@@ -40,6 +43,12 @@ const HeaderMenu = () => {
                             )}
                         </li>
                     ))}
+                    <li>
+                        تغییر پس زمینه
+                        <div className='itemsIcon'>
+                            <IoSunny id='toggleTheme' onClick={toggleTheme} />
+                        </div>
+                    </li>
                     <li>
                         حساب کاربری
                         <div className='itemsIcon'>
@@ -66,7 +75,7 @@ const HeaderMenu = () => {
                         <div>
                             {item.name}
                             {item.subMenu && (
-                                <IoIosArrowDown />
+                                <IoIosArrowDown className='dynamicArrowDesktop' />
                             )}
                         </div>
                         {item.subMenu && (
@@ -78,6 +87,21 @@ const HeaderMenu = () => {
                         )}
                     </li>
                 ))}
+                <li className='searchInputDesktop'>
+                    <img src={search} alt="search" />
+                </li>
+                <li className='cartDesktop'>
+                    <img src={cart} alt="cart" />
+                </li>
+                <li className='accountDesktop'>
+                    <button>
+                        <img src={person} alt="person" />
+                        حساب کاربری
+                    </button>
+                </li>
+                <li>
+                    <IoSunny id='toggleTheme' onClick={toggleTheme} />
+                </li>
             </ul>
         </>
     )

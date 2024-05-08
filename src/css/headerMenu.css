@@ -9,7 +9,8 @@
     background-color: var(--background);    
     font: 500 1rem 'iransans';
     overflow-y: scroll;
-    transition: all .3s linear;
+    transition: transform .3s linear;
+    color: var(--text);
 }
 
 #menuContainer.active {
@@ -55,6 +56,15 @@
 
 .menuList .subMenu.active {
     max-height: 300px;
+}
+
+#toggleTheme {
+    font-size: 1.5rem;
+    color: var(--yellow);
+}
+
+html[dark] #toggleTheme {
+    color: white;
 }
 
 .menuList .itemsIcon {
@@ -127,10 +137,11 @@
     .menuListDesktop {
         display: flex;
         align-items: center;
-        column-gap: 3rem;
-        font: 1rem 'iransans';
+        column-gap: 1.25rem;
+        font: 1.07rem 'iransans';
         color: var(--text);
-        margin-right: 2.5rem;
+        margin-right: 1.25rem;
+        width: 100%;
     }
     .menuListDesktop li {
         position: relative;
@@ -143,9 +154,10 @@
     }
     .subMenuDesktop {
         position: absolute;
+        top: 100%;
         background-color: var(--background);
         border: 1.5px solid var(--stroke);
-        border-radius: .25rem;
+        border-radius: .5rem;
         display: none;
     }
     .menuListDesktop li:hover .subMenuDesktop {
@@ -156,10 +168,65 @@
         border-bottom: 1.5px solid var(--stroke);
     }
     .subMenuDesktop li:hover {
-        background-color: #B5C0D0;
+        background-color: #387ADF;
         color: white;
     }
     .subMenuDesktop li:last-child {
         border: none;
+    }
+    .menuListDesktop li:hover .dynamicArrowDesktop {
+        transform: rotate(180deg);
+    }
+    .searchInputDesktop {
+        display: grid;
+        place-content: center;
+    }
+    .searchInputDesktop img {
+        filter: brightness(0);
+        width: 23px;
+        height: 23px;
+    }
+    html[dark] .searchInputDesktop img {
+        filter: brightness(1);
+    }
+    .cartDesktop {
+        background-color: var(--primary);
+        padding: .30rem;
+        border-radius: 50%;
+        display: grid;
+        place-content: center;
+        margin-right: auto;
+    }
+    .accountDesktop button {
+        border: 1.5px solid var(--stroke);
+        display: flex;
+        align-items: center;
+        column-gap: .25rem;
+        padding: .35rem 1rem;
+        border-radius: 3rem;
+        background-color: var(--background);
+        color: var(--text);
+    }
+    .accountDesktop button img {
+        width: 22px;
+        height: 22px;
+        filter: brightness(0);
+    }
+    html[dark] .accountDesktop button img {
+        filter: brightness(1);
+    }
+    #toggleTheme {
+        color: var(--yellow);
+        font-size: 1.5rem;
+    }
+    html[dark] #toggleTheme {
+        color: white;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .menuListDesktop {
+        column-gap: 2.2rem;
+        margin-right: 2rem;
     }
 }

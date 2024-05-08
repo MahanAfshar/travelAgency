@@ -11,13 +11,13 @@ const Main = styled.main`
   background-color: var(--background);
 
   @media only screen and (min-width: 600px) {
-    padding: 5rem 2rem;
+    padding: 6rem 2rem;
   };
   @media only screen and (min-width: 750px) {
-    padding: 5rem 3rem;
+    padding: 6rem 3rem;
   };
   @media only screen and (min-width: 1000px) {
-    padding: 5rem 4.5rem;
+    padding: 6rem 4.5rem;
   };
 `;
 

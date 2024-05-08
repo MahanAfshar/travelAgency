@@ -37,7 +37,7 @@ h1 {
     height: 2px;
     background-color: var(--base);
     border-radius: .25rem;
-    transition: all .3s linear;
+    transition: transform .3s linear;
 }
 
 #bars.active :nth-child(1) {
@@ -85,5 +85,12 @@ h1 {
     }
     #bars {
         display: none;
+    }
+    .menuListDesktop li {
+        display: grid;
+        place-content: center;
+    }
+    #toggleTheme {
+        font-size: 1.5rem;
     }
 }
