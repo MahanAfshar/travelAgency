@@ -43,10 +43,10 @@ const HeaderMenu = () => {
                             )}
                         </li>
                     ))}
-                    <li>
+                    <li onClick={toggleTheme}>
                         تغییر پس زمینه
                         <div className='itemsIcon'>
-                            <IoSunny id='toggleTheme' onClick={toggleTheme} />
+                            <IoSunny id='toggleTheme' />
                         </div>
                     </li>
                     <li>

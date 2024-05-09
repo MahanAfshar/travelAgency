@@ -1,6 +1,6 @@
-import antalya from './../assets/images/antalya.jpg'
-import dubai from './../assets/images/dubai.jpg'
-import malaysia from './../assets/images/malaysia.jpg'
+import antalya from './../assets/images/antalya.png'
+import dubai from './../assets/images/dubai.png'
+import malaysia from './../assets/images/malaysia.png'
 
 const bestSellingTourData = [
     {

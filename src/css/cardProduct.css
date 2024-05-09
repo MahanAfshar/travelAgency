@@ -65,3 +65,21 @@
     display: grid;
     place-content: center;
 }
+
+@media only screen and (min-width: 600px) {
+    .cardContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+    .cardContainer li {
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 930px) {
+    .cardContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

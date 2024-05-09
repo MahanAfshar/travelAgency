@@ -6,9 +6,9 @@ const CardProduct = ({ data }) => {
     const numberWithCommas = (number) => {
         return Number(number).toLocaleString();
     };
-    
+
     return (
-        <ul>
+        <ul className='cardContainer'>
             {data.map(item => (
                 <li key={item.id} className="card">
                     <img src={item.image} alt={item.name} />
