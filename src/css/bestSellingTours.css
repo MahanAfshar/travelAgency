@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .bestSellingHeader div {
@@ -40,6 +41,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    order: 2;
+    width: 100%;
 }
 
 .filterSection ul {
@@ -55,9 +58,14 @@
     border-bottom: 2px solid var(--primary);
 }
 
+.filterSection ul li {
+    cursor: pointer;
+}
+
 .filterSection img {
     width: 1.35rem;
     filter: brightness(0);
+    cursor: pointer;
 }
 
 html[dark] .filterSection img {
@@ -73,4 +81,18 @@ html[dark] .filterSection img {
     display: none;
     place-content: center;
     margin: .5rem auto;
+}
+
+@media only screen and (min-width: 900px) {
+    .bestSellingHeader button {
+        order: 3;
+    }
+    .bestSellingContainer .filterSection {
+        flex-grow: 1;
+        width: auto;
+        padding: 0 1.5rem;
+    }
+    .loadButton {
+        display: grid;
+    }
 }

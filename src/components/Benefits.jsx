@@ -3,6 +3,7 @@ import dollar from './../assets/icons/dollar.svg'
 import clock from './../assets/icons/clock.svg'
 import questionMark from './../assets/icons/questionMark.svg'
 import styled from 'styled-components'
+import world from './../assets/images/world.png'
 
 const benefitsList = [
     {
@@ -25,26 +26,38 @@ const benefitsList = [
 const BenefitSection = styled.div`
     color: var(--text);
     font-family: 'iransans';
+    
+    @media only screen and (min-width: 1000px) {
+        background: url(${world}) 0px -10px / cover no-repeat;
+        padding-bottom: 1.75rem;
+    }
 `;
 const H3 = styled.h3`
     display: flex;
     align-items: center;
     column-gap: .25rem;
-    padding-bottom: .5rem;
+    padding-bottom: 1rem;
 
     span {
         border-bottom: 2px solid var(--primary);
     }
 `;
 const Ul = styled.ul`
-    padding: 1rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    row-gap: .75rem;
+    row-gap: 1.25rem;
     text-align: center;
     background-color: var(--card-container);
     border-radius: 2rem;
     border: 1.5px solid var(--border-container);
+
+    @media only screen and (min-width: 900px) {
+        flex-direction: row;
+        gap: 1.25rem;
+        margin-top: 1rem;
+        padding: 1.5rem;
+    }
 `;
 const Li = styled.li`
     background-color: var(--card-background);

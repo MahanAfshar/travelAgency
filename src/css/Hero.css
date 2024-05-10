@@ -177,7 +177,7 @@ html[dark] img.searchIcons {
     content: attr(select-date);
     color: var(--text);
     position: absolute;
-    top: 55%;
+    top: 57%;
     right: 2rem;
     transform: translateY(-50%);
     font: 1.1rem 'iransans';

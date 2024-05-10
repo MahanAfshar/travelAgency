@@ -15,15 +15,15 @@ const BestSellingTours = () => {
                     <h3><span className='primaryLine'>پرفروش</span> ترین تورها</h3>
                     <img src={bomb} alt="bomb" />
                 </div>
+                <div className='filterSection'>
+                    <ul>
+                        {tourList.map((item, index) => (
+                            <li key={index}>{item}</li>
+                        ))}
+                    </ul>
+                    <img src={filter} alt="filter" />
+                </div>
                 <button>دیدن همه</button>
-            </div>
-            <div className='filterSection'>
-                <ul>
-                    {tourList.map((item, index) => (
-                        <li key={index}>{item}</li>
-                    ))}
-                </ul>
-                <img src={filter} alt="filter" />
             </div>
             <CardProduct data={BestSellingToursData} />
             <button className='loadButton'>

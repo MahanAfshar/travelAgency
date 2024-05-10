@@ -43,6 +43,17 @@
   --menu-icon-background: #3D3D3D;
 }
 
+::-webkit-scrollbar {
+  background-color: var(--secondary);
+  width: .85rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 2rem;
+  border: 1px solid var(--secondary);
+}
+
 ul {
   list-style: none;
 }

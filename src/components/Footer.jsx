@@ -10,21 +10,27 @@ const socialMediaList = [<FaTwitter />, <FaFacebookF />, <RiInstagramFill />];
 const Footer = () => {
   return (
     <footer>
+      <div className='topFooter'>
         <h2>
-            <img src={logo} alt="logo" />
-            سفرکن
+          <img src={logo} alt="logo" />
+          سفرکن
         </h2>
         <ul className='links'>
           {footerList.map((item, index) => (
-            <li key={index}>{item}</li>
+            <li key={index}>
+              <span>{item}</span>
+            </li>
           ))}
         </ul>
+      </div>
+      <div className='bottomFooter'>
         <ul className='socialMediaLinks'>
           {socialMediaList.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
         </ul>
         <p className='copyRight'>تمامی حقوق برای کاربر این محصول محفوظ است.</p>
+      </div>
     </footer>
   )
 }

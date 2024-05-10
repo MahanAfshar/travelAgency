@@ -51,3 +51,33 @@
     font-size: 1.2rem;
     padding: 0 .1rem;
 }
+
+@media only screen and (min-width: 600px) {
+    .downloadContainer {
+        background: url('./../assets/images/worldTwo.png');
+        text-align: center;
+        display: grid;
+        place-items: center;
+        row-gap: 1rem;
+        padding: 3rem;
+    }
+    .webAppContainer {
+        display: none;
+    }
+    .downloadContainer .downloadDescription {
+        max-width: 600px;
+    }
+    .downloadContainer .downloadDescription {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .downloadContainer .buttonContainer {
+        display: flex;
+        column-gap: 1rem;
+        align-items: center;
+    }
+    .downloadContainer .downloadButton {
+        width: 170px;
+        padding: .5rem;
+    }
+}
