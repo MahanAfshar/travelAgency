@@ -7,6 +7,7 @@ import person from "./../assets/icons/person.svg"
 import { useState } from 'react'
 import { IoIosArrowDown } from "react-icons/io"
 import { IoSunny } from "react-icons/io5"
+import { Link } from 'react-router-dom'
 
 const HeaderMenu = () => {
     const [dropdownActive, setDropdownActive] = useState('');
@@ -50,10 +51,12 @@ const HeaderMenu = () => {
                         </div>
                     </li>
                     <li>
-                        حساب کاربری
-                        <div className='itemsIcon'>
-                            <img src={person} alt="person" />
-                        </div>
+                        <Link to="/login">
+                            حساب کاربری
+                            <div className='itemsIcon'>
+                                <img src={person} alt="person" />
+                            </div>
+                        </Link>
                     </li>
                     <li>
                         سبد خرید
@@ -94,10 +97,12 @@ const HeaderMenu = () => {
                     <img src={cart} alt="cart" />
                 </li>
                 <li className='accountDesktop'>
-                    <button>
-                        <img src={person} alt="person" />
-                        حساب کاربری
-                    </button>
+                    <Link to="/login">
+                        <button>
+                            <img src={person} alt="person" />
+                            حساب کاربری
+                        </button>
+                    </Link>
                 </li>
                 <li>
                     <IoSunny id='toggleTheme' onClick={toggleTheme} />

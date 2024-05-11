@@ -1,3 +1,4 @@
+import Header from "../components/Header"
 import Hero from "../components/Hero"
 import styled from "styled-components"
 import PopularPlaces from "../components/PopularPlaces"
@@ -5,6 +6,7 @@ import Benefits from "../components/Benefits"
 import BestSellingTours from "../components/BestSellingTours"
 import DownloadSection from "../components/DownloadSection"
 import Comments from "../components/Comments"
+import Footer from "../components/Footer"
 
 const Main = styled.main`
   padding: 6rem 1rem 1rem 1rem;
@@ -23,14 +25,18 @@ const Main = styled.main`
 
 const Home = () => {
   return (
-    <Main className="container">
-      <Hero />
-      <PopularPlaces />
-      <Benefits />
-      <BestSellingTours />
-      <DownloadSection />
-      <Comments />
-    </Main>
+    <>
+      <Header />
+      <Main className="container">
+        <Hero />
+        <PopularPlaces />
+        <Benefits />
+        <BestSellingTours />
+        <DownloadSection />
+        <Comments />
+      </Main>
+      <Footer />
+    </>
   )
 }
 

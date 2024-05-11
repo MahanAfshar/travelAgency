@@ -31,7 +31,14 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
+#menuContainer .menuList li a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text);
+    text-decoration: none;
+}
 .menuItemsTitle {
     width: 100%;
     display: flex;
@@ -196,6 +203,9 @@ html[dark] #toggleTheme {
         display: grid;
         place-content: center;
         margin-right: auto;
+    }
+    .accountDesktop a {
+        text-decoration: none;
     }
     .accountDesktop button {
         border: 1.5px solid var(--stroke);
