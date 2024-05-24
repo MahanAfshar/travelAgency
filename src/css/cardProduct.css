@@ -3,8 +3,12 @@
     border: 1.5px solid var(--stroke);
     border-radius: 1.25rem;
     margin-bottom: 1rem;
-    color: var(--text);
     font: 1.1rem 'iransans';
+    color: var(--text);
+}
+
+.card a {
+    color: var(--text);
 }
 
 .card img {
@@ -40,7 +44,8 @@
 .duration {
     opacity: .75;
     font: 300 .9rem 'dana';
-    padding: .5rem 0;
+    padding-top: .5rem;
+    margin-bottom: .5rem;
 }
 
 .footerCard {

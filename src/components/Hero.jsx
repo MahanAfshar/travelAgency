@@ -11,6 +11,7 @@ import calendar from './../assets/icons/calendar.svg'
 import { useState } from 'react'
 import { MdOutlineKeyboardArrowDown } from "react-icons/md"
 import person from './../assets/icons/person.svg'
+import SelectElement from './SelectElement'
 
 const placesList = [
   {
@@ -31,7 +32,7 @@ const placesList = [
   }
 ];
 const citiesList = ['تهران', 'مشهد', 'شیراز', 'اصفهان', 'تبریز'];
-const numbersList = [1, 2, 3, 4, 5];
+const numbersList = ['1 نفر', '2 نفر', '3 نفر', '4 نفر', '5 نفر'];
 
 const Hero = () => {
   const date = new Date();
@@ -45,6 +46,8 @@ const Hero = () => {
   const fullDate = `${year}-${month}-${today}`;
   const [startDate, setStartDate] = useState('تاریخ ورود');
   const [endDate, setEndDate] = useState('تاریخ خروج');
+  const [seletedNumber, setSelectedNumber] = useState('تعداد');
+  const [selectedDestination, setSelectedDestination] = useState('مقصد خود را انتخاب کنید');
 
   return (
     <div className='hero'>
@@ -82,12 +85,7 @@ const Hero = () => {
         <li>
           <div className='destination'>
             <img className='searchIcons' src={location} alt="location" />
-            <select>
-              <option>مقصد خود را انتخاب کنید</option>
-              {citiesList.map((city, index) => (
-                <option key={index} value={city}>{city}</option>
-              ))}
-            </select>
+            <SelectElement selected={selectedDestination} setSelected={setSelectedDestination} options={citiesList} uniqueClass='selectDestination' />
           </div>
         </li>
         <li>
@@ -106,12 +104,7 @@ const Hero = () => {
         </li>
         <li className='personSection'>
           <img className='searchIcons' src={person} alt="person" />
-          <select>
-            <option>تعداد</option>
-            {numbersList.map((number, index) => (
-              <option key={index} value={number}>{number} نفر</option>
-            ))}
-          </select>
+          <SelectElement selected={seletedNumber} setSelected={setSelectedNumber} options={numbersList} uniqueClass='selectNumber' />
         </li>
         <li>
           <button className='searchButton'>جستجو</button>

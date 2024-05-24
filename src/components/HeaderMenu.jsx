@@ -1,4 +1,3 @@
-import headerMenuList from './../lists/headerMenuList'
 import './../css/headerMenu.css'
 import { IoIosArrowBack } from "react-icons/io"
 import search from "./../assets/icons/search.svg"
@@ -8,6 +7,43 @@ import { useState } from 'react'
 import { IoIosArrowDown } from "react-icons/io"
 import { IoSunny } from "react-icons/io5"
 import { Link } from 'react-router-dom'
+
+const headerMenuList = [
+    {
+        name: 'هتل',
+        subMenu: false
+    },
+    {
+        name: 'تور داخلی',
+        subMenu: true,
+        subMenuList: [
+            'تهران',
+            'مشهد',
+            'شیراز',
+            'اصفهان',
+            'تبریز'
+        ]
+    },
+    {
+        name: 'تور خارجی',
+        subMenu: true,
+        subMenuList: [
+            'آنتالیا',
+            'دبی',
+            'مالزی',
+            'نیویورک',
+            'پاریس'
+        ]
+    },
+    {
+        name: 'بیمه مسافرتی',
+        subMenu: false
+    },
+    {
+        name: 'سفرنامه',
+        subMenu: false
+    }
+];
 
 const HeaderMenu = () => {
     const [dropdownActive, setDropdownActive] = useState('');

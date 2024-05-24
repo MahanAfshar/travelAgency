@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 import tower from './../assets/icons/tower.svg'
 import CardProduct from './CardProduct'
-import tourData from './../data/tourData'
 import { IoIosArrowDown } from "react-icons/io"
+import toursData from '../data/toursData';
+
 
 const Container = styled.div`
     padding-top: 1.5rem;
@@ -44,6 +45,8 @@ const LoadButton = styled.button`
 `;
 
 const PopularPlaces = () => {
+    const sortedData = toursData.sort((a, b) => b.score - a.score).slice(0, 3);
+    
     return (
         <Container>
             <Wrapper>
@@ -53,7 +56,7 @@ const PopularPlaces = () => {
                 </H2>
                 <Button>دیدن همه</Button>
             </Wrapper>
-            <CardProduct data={tourData} />
+            <CardProduct data={sortedData} />
             <LoadButton>
                 <IoIosArrowDown />
             </LoadButton>

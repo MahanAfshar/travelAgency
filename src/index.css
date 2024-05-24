@@ -25,6 +25,8 @@
   --icon-background: rgba(62, 92, 251, .45);
   --comment-name: #6F1DF4;
   --menu-icon-background: rgba(62, 93, 251, 0.975);
+  --red: #FF6588;
+  --secondary-pill: #EAEAEA;
 }
 
 :root[dark] {
@@ -41,21 +43,7 @@
   --icon-background: #3D3D3D;
   --comment-name: #5264FF;
   --menu-icon-background: #3D3D3D;
-}
-
-@media only screen and (min-width: 1100px) {
-  html {
-    ::-webkit-scrollbar {
-      background-color: var(--secondary);
-      width: .85rem;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background-color: var(--primary);
-      border-radius: 2rem;
-      border: 1px solid var(--secondary);
-    }
-  }
+  --secondary-pill: #2E2E2E;
 }
 
 ul {
@@ -80,4 +68,58 @@ select:hover {
 
 option {
   background-color: var(--background);
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  border: 1px solid var(--stroke);
+  border-radius: .1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="checkbox"]::after {
+  content: '';
+  width: 7px;
+  height: 3px;
+  border: 3px solid white;
+  border-top-width: 0;
+  border-right-width: 0;
+  transform: rotate(-45deg);
+  border-radius: .1rem;
+  display: none;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--primary);
+  border-color: transparent;
+}
+
+input[type="checkbox"]:checked::after {
+  display: block;
+}
+
+@media only screen and (min-width: 1100px) {
+  html {
+    ::-webkit-scrollbar {
+      background-color: var(--secondary);
+      width: .85rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--primary);
+      border-radius: 2rem;
+      border: 1px solid var(--secondary);
+    }
+  }
 }

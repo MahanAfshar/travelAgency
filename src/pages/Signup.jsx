@@ -5,15 +5,15 @@ import { IoMdEyeOff } from "react-icons/io"
 import { IoMdEye } from "react-icons/io"
 import { useState } from 'react'
 
-const Login = () => {
+const Signup = () => {
     const [showPass, setShowPass] = useState(false);
     const showHandler = () => {
         setShowPass(prev => !prev)
-        const passInput = document.querySelector('.password');
-        if (passInput.getAttribute('type') === 'password')
-            passInput.setAttribute('type', 'text')
+        const passInputs = document.querySelectorAll('.password');
+        if (passInputs[0].getAttribute('type') === 'password')
+            passInputs.forEach(item => item.setAttribute('type', 'text'));
         else
-            passInput.setAttribute('type', 'password')
+            passInputs.forEach(item => item.setAttribute('type', 'password'));
     };
 
     return (
@@ -22,7 +22,8 @@ const Login = () => {
             <div className='formWrapper'>
                 <form onSubmit={(e) => e.preventDefault()}>
                     <h2>خوش آمدید</h2>
-                    <input placeholder="نام کاربری" />
+                    <span>ثبت نام</span>
+                    <input placeholder="شماره همراه" />
                     <div className='passContainer'>
                         <input className='password' type='password' placeholder="رمز عبور" />
                         {
@@ -32,21 +33,30 @@ const Login = () => {
                                 <IoMdEyeOff className='eyeIcon' onClick={showHandler} />
                         }
                     </div>
+                    <div className='passContainer'>
+                        <input className='password' type='password' placeholder="تکرار رمز عبور" />
+                        {
+                            showPass ?
+                                <IoMdEye className='eyeIcon' onClick={showHandler} />
+                                :
+                                <IoMdEyeOff className='eyeIcon' onClick={showHandler} />
+                        }
+                    </div>
+                    <button className='sendButton'>ارسال</button>
                     <div className='forget'>
                         رمز عبور خود را فراموش کرده اید؟
                         <span>بازیابی رمز عبور</span>
                     </div>
-                    <button className='sendButton'>ارسال</button>
                     <div className='withAccount'>
-                        <span>وارد شدن با</span>
+                        <span>ثبت نام</span>
                     </div>
                     <button className='googleButton'>
                         Google
                         <img src={google} alt="google" />
                     </button>
                     <div className='question'>
-                        حساب کاربری ندارید؟
-                        <span><Link to="/signup">ثبت نام</Link></span>
+                        عضو سفرکن هستید؟
+                        <span><Link to="/login">ورود</Link></span>
                     </div>
                 </form>
             </div>
@@ -54,4 +64,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default Signup

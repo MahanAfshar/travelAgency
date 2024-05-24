@@ -37,7 +37,6 @@
     align-items: center;
     justify-content: space-between;
     color: var(--text);
-    text-decoration: none;
 }
 .menuItemsTitle {
     width: 100%;
@@ -178,8 +177,14 @@ html[dark] #toggleTheme {
         background-color: #387ADF;
         color: white;
     }
+    .subMenuDesktop li:first-child {
+        border-start-start-radius: inherit;
+        border-start-end-radius: inherit;
+    }
     .subMenuDesktop li:last-child {
         border: none;
+        border-end-start-radius: inherit;
+        border-end-end-radius: inherit;
     }
     .menuListDesktop li:hover .dynamicArrowDesktop {
         transform: rotate(180deg);
@@ -203,9 +208,6 @@ html[dark] #toggleTheme {
         display: grid;
         place-content: center;
         margin-right: auto;
-    }
-    .accountDesktop a {
-        text-decoration: none;
     }
     .accountDesktop button {
         border: 1.5px solid var(--stroke);

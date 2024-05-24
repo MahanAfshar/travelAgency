@@ -1,13 +1,15 @@
+import toursData from '../data/toursData'
 import bomb from './../assets/icons/bomb.svg'
 import filter from './../assets/icons/filter.svg'
 import './../css/bestSellingTours.css'
 import CardProduct from './CardProduct'
-import BestSellingToursData from './../data/bestSellingTourData'
 import { IoIosArrowDown } from "react-icons/io"
 
 const tourList = ['همه تورها', 'تور ایران', 'تور اروپا', 'تور آسیا'];
 
 const BestSellingTours = () => {
+    const sortedData = toursData.sort((a, b) => b.sell - a.sell);
+    
     return (
         <div className='bestSellingContainer'>
             <div className='bestSellingHeader'>
@@ -25,7 +27,7 @@ const BestSellingTours = () => {
                 </div>
                 <button>دیدن همه</button>
             </div>
-            <CardProduct data={BestSellingToursData} />
+            <CardProduct data={sortedData} />
             <button className='loadButton'>
                 <IoIosArrowDown />
             </button>

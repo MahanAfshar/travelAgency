@@ -1,25 +1,25 @@
 import './../css/cardProduct.css'
 import { FaStar } from "react-icons/fa"
 import { FaPlus } from "react-icons/fa6"
+import { Link } from 'react-router-dom';
+import { numberWithCommas } from '../utilities/utlitie'
 
 const CardProduct = ({ data }) => {
-    const numberWithCommas = (number) => {
-        return Number(number).toLocaleString();
-    };
-
     return (
         <ul className='cardContainer'>
             {data.map(item => (
                 <li key={item.id} className="card">
-                    <img src={item.image} alt={item.name} />
-                    <div className="details">
-                        <h3>{item.name}</h3>
-                        <div className="score">
-                            <FaStar />
-                            <span>{item.score}</span>
+                    <Link to={`/tour/${item.id}`}>
+                        <img src={item.image} alt={item.name} />
+                        <div className="details">
+                            <h3>{item.name}</h3>
+                            <div className="score">
+                                <FaStar />
+                                <span>{item.score}</span>
+                            </div>
                         </div>
-                    </div>
-                    <div className="duration">{item.duration}</div>
+                        <div className="duration">{item.duration}</div>
+                    </Link>
                     <div className="footerCard">
                         <div>
                             {numberWithCommas(item.price)} تومان
