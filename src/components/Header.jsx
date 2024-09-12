@@ -1,5 +1,5 @@
 import logo from './../assets/icons/logo.svg'
-import '../css/header.css'
+import './../css/header.css'
 import HeaderMenu from './HeaderMenu'
 
 const Header = () => {
