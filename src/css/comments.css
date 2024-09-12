@@ -1,6 +1,7 @@
 .commentsContainer {
     padding: .5rem 0;
     color: var(--text);
+    display: grid;
 }
 
 .commentsContainer h4 {

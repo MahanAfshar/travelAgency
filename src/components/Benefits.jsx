@@ -26,6 +26,7 @@ const benefitsList = [
 const BenefitSection = styled.div`
     color: var(--text);
     font-family: 'iransans';
+    display: grid;
     
     @media only screen and (min-width: 1000px) {
         background: url(${world}) 0px -10px / cover no-repeat;

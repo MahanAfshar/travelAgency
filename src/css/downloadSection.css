@@ -56,8 +56,10 @@
     .downloadContainer {
         background: url('./../assets/images/worldTwo.png');
         text-align: center;
-        display: grid;
-        place-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         row-gap: 1rem;
         padding: 3rem;
     }
